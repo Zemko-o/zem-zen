@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Zem-Zen Wellness</title>
+  <title>Zem-Com – Wellness</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -22,18 +22,44 @@
 
   <main>
     <section class="hero">
-      <h1>Zen Wellness</h1>
-      <p>Relax your mind and body in our exclusive spa retreat.</p>
+      <h1>Private Wellness</h1>
+      <p>Relax and recharge in your own peaceful oasis in Dolný Kubín.</p>
     </section>
 
     <section class="section">
-      <h2>Facilities</h2>
+      <h2>What We Offer</h2>
+      <p>Enjoy a serene spa-like experience featuring:</p>
       <ul>
-        <li>Outdoor jacuzzi with mountain views</li>
+        <li>Outdoor hot tub with scenic views</li>
         <li>Finnish and infrared saunas</li>
-        <li>Private relaxation lounge</li>
-        <li>Aromatic oils & calming music</li>
+        <li>Private relaxation room with herbal tea</li>
       </ul>
+      <div class="gallery">
+        <img src="images/wellness1.jpg" alt="Outdoor hot tub" />
+        <img src="images/wellness2.jpg" alt="Wooden sauna interior" />
+        <img src="images/relaxation.jpg" alt="Serene relaxation room" />
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Wellness Packages (2 hours)</h2>
+      <ul>
+        <li><strong>Classic:</strong> Private access for 2 guests</li>
+        <li><strong>Exclusive:</strong> Premium privacy + aromatherapy</li>
+        <li><strong>Romantic Escape:</strong> Lighting, music & wine included</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Book Your Wellness Experience</h2>
+      <form action="https://formsubmit.co/your-email@example.com" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="text" name="package" placeholder="Selected Package" required />
+        <input type="datetime-local" name="preferred_time" required />
+        <textarea name="message" rows="4" placeholder="Notes or requests..."></textarea>
+        <button type="submit">Book Now</button>
+      </form>
     </section>
   </main>
 
@@ -42,4 +68,3 @@
   </footer>
 </body>
 </html>
-
