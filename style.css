@@ -1,7 +1,11 @@
 /* style.css */
 
 /* Importing Poppins font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+.quintessential-regular {
+  font-family: "Quintessential", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
 body {
     margin: 0;
