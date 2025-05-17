@@ -44,7 +44,7 @@ nav a {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-nav a:hover
+nav a:hover,
 nav a:active {
     background-color: #1f2a44; /* Navy highlight */
     transform: scale(1.05);
