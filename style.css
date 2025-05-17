@@ -70,13 +70,16 @@ main {
     font-family: 'Quintessential', serif;
     font-size: 3.5rem;
 }
-.header-bar {
+.section-header {
     background-color: #1f2a44;
+    padding: 1rem 2rem;
     color: white;
-    padding: 1rem;
-    border-radius: 0;
-    margin-bottom: 2rem;
-    width: 100%;
+    margin: 2rem 0;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
 }
 
 
