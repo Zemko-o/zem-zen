@@ -1,7 +1,11 @@
 /* style.css */
+
+/* Importing Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 body {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #ffffff;
     color: #1a1a1a;
 }
@@ -26,12 +30,12 @@ nav a {
     color: white;
     text-decoration: none;
     margin: 0 15px;
-    font-weight: bold;
+    font-weight: 600;
     transition: color 0.3s;
 }
 
 nav a:hover {
-    color: gold;
+    color: #1f2a44; /* Elegant navy blue hover */
 }
 
 main {
@@ -87,13 +91,14 @@ form textarea {
     margin: 0.5rem 0;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
 }
 
 form button {
-    background-color: gold;
+    background-color: #1f2a44;
     border: none;
     padding: 10px 20px;
-    color: #000;
+    color: white;
     font-weight: bold;
     cursor: pointer;
     border-radius: 5px;
@@ -101,5 +106,5 @@ form button {
 }
 
 form button:hover {
-    background-color: #d4af37;
+    background-color: #344266;
 }
