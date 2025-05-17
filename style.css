@@ -33,13 +33,16 @@ nav {
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0 10px;
     font-weight: 600;
-    transition: color 0.3s;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
 }
 
 nav a:hover {
-    color: #1f2a44; /* Elegant navy blue hover */
+    background-color: #1f2a44; /* Navy */
+    transform: scale(1.1);     /* Grows a bit */
 }
 
 main {
