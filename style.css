@@ -29,6 +29,7 @@ nav .logo {
 nav .nav-links a {
   color: white;
   text-decoration: none;
+  align-items: center;
   padding: 1rem;
   font-weight: 600;
   transition: background-color 0.3s ease, transform 0.3s ease;
