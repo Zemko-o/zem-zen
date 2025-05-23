@@ -139,10 +139,10 @@ main {
 
 .section-gallery img {
   width: 100%;
-  height: auto;
+  height: 300px; /* fixed height */
+  object-fit: cover; /* crop and fill without distortion */
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  object-fit: cover;
 }
 .section-text h2 {
     
