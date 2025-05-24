@@ -2,63 +2,107 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Zem-Com – Stay</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zem-Com – Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poltawski+Nowy:wght@400;700&family=Quintessential&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <nav>
-      <div class="logo"><strong>Zem-Com</strong></div>
+      <div class="logo">
+        <a href="index.html">
+        <img src="images/logo.png" alt="Zem-Com Logo" />
+        </a>
+      </div>
+
       <div class="nav-links">
-        <a href="index.html">Home</a>
+        <a href="index.html" class="active">Domov</a>
         <a href="wellness.html">Wellness</a>
-        <a href="stay.html" class="active">Stay</a>
-        <a href="photos.html">Photos</a>
-        <a href="contact.html">Contact</a>
+        <a href="stay.html">Pobyt</a>
+        <a href="photos.html">Galéria</a>
+        <a href="contact.html">Kontakt</a>
       </div>
     </nav>
   </header>
 
   <main>
+    
     <section class="hero">
-      <h1>Your Cozy Cottage</h1>
-      <p>Find peace in comfort surrounded by Slovak nature.</p>
+      <h1 class="header-bar">Vitajte v Zem-Com</h1>
+      <p>Your cozy escape in the heart of Dolný Kubín – relax, recharge, and feel at home.</p>
     </section>
 
-    <section class="section">
-      <h2>Cottage Features</h2>
-      <ul>
-        <li>Accommodates up to 5 guests</li>
-        <li>WiFi, electricity, heating</li>
-        <li>Forest-view private terrace</li>
-        <li>Outdoor grill & picnic area</li>
-      </ul>
-    </section>
+    <section class="section split-section wellness">
+  <div class="section-text">
+    <h2>Wellness &amp; Relaxation</h2>
+    <p>Unwind in our private wellness zone featuring a jacuzzi, two saunas, and a serene relaxation room.</p>
+  </div>
+  <!-- Wellness Section -->
+<div class="section-gallery">
+  <img src="images/pic1.jpeg" alt="Wellness Photo" id="wellness-slider" />
+</div>
+</section>
 
-    <section class="section">
-      <h2>Stay Options</h2>
-      <ul>
-        <li><strong>Classic Stay:</strong> Overnight with full amenities</li>
-        <li><strong>Relax & Recharge:</strong> Includes wellness session</li>
-      </ul>
-    </section>
+<section class="section split-section stay">
+  <div class="section-text">
+    <h2>Your Stay</h2>
+    <p>Stay in our charming cottage with space for up to 5 guests, full amenities, and breathtaking views.</p>
+  </div>
+  <!-- Stay Section -->
+<div class="section-gallery">
+  <img src="images/pic4.jpeg" alt="Stay Photo" id="stay-slider" />
+</div>
+</section>
 
-    <section class="section">
-      <h2>Book Your Stay</h2>
-      <form action="https://formsubmit.co/your-email@example.com" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <input type="text" name="option" placeholder="Stay Option" required />
-        <input type="date" name="date" required />
-        <textarea name="message" rows="4" placeholder="Any special requests?"></textarea>
-        <button type="submit">Book Stay</button>
-      </form>
-    </section>
+
+   <div class="full-width-bg darker-gray-bg">
+  <section class="section">
+    <h2>Čo sa dá robiť v okolí</h2>
+    <ul>
+      <li>Hike the beautiful Choč Mountains</li>
+      <li>Ski at Kubínska hoľa in winter</li>
+      <li>Visit Orava Castle and local museums</li>
+      <li>Try local Slovak food in traditional restaurants</li>
+      <li>Relax by the Orava River</li>
+    </ul>
+  </section>
+</div>
+
   </main>
 
   <footer>
     <p>&copy; 2025 Zem-Com. All rights reserved.</p>
   </footer>
+  <script>
+  // Wellness Slideshow
+  const wellnessImages = [
+    "images/pic1.jpeg",
+    "images/pic2.jpeg"
+  ];
+  let wellnessIndex = 0;
+  const wellnessSlider = document.getElementById("wellness-slider");
+
+  setInterval(() => {
+    wellnessIndex = (wellnessIndex + 1) % wellnessImages.length;
+    wellnessSlider.src = wellnessImages[wellnessIndex];
+  }, 2000);
+
+  // Stay Slideshow
+  const stayImages = [
+    "images/pic4.jpeg",
+    "images/pic3.jpeg"
+  ];
+  let stayIndex = 0;
+  const staySlider = document.getElementById("stay-slider");
+
+  setInterval(() => {
+    stayIndex = (stayIndex + 1) % stayImages.length;
+    staySlider.src = stayImages[stayIndex];
+  }, 2000);
+</script>
+
 </body>
 </html>
