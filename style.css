@@ -244,8 +244,8 @@ footer {
   max-width: 700px;
   width: 100%;
   height: auto;
+  border-radius: 10px;
 }
-
 /* Pre párne položky obrázok vpravo, text vľavo */
 .offer-item:nth-child(even) {
   flex-direction: row-reverse;
