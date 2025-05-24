@@ -232,3 +232,21 @@ footer {
   padding: 1rem 2rem;
   margin-top: 0 rem;
 }
+
+.offer-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.offer-img {
+  max-width: 700px;
+  width: 100%;
+  height: auto;
+}
+
+/* Pre párne položky obrázok vpravo, text vľavo */
+.offer-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
