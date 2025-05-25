@@ -12,6 +12,11 @@
       <img src="images/reviews/review8.jpg" alt="Review 8" />
       <img src="images/reviews/review9.jpg" alt="Review 9" />
       <img src="images/reviews/review10.jpg" alt="Review 10" />
+      <img src="images/reviews/review11.jpg" alt="Review 11" />
+      <img src="images/reviews/review12.jpg" alt="Review 12" />
+      <img src="images/reviews/review13.jpg" alt="Review 13" />
+      <img src="images/reviews/review14.jpg" alt="Review 14" />
+      <img src="images/reviews/review15.jpg" alt="Review 15" />
     </div>
   </div>
 
@@ -41,16 +46,16 @@
 
     .slides {
       display: flex;
-      gap: 10px;
+      gap: 5px;
       height: 100%;
       animation: slideSteps 20s infinite;
     }
 
 
     .slides img {
-  flex: 0 0 calc((100% / 3) - (10px * 2 / 3));
+  flex: 0 0 calc((100% / 3) - (5px * 2 / 3));
   height: 100%;
-  object-fit: contain;  /* <-- tu zmena */
+  object-fit: scale-down;  /* <-- tu zmena */
   user-select: none;
   pointer-events: none;
   border-radius: 5px;
@@ -58,23 +63,13 @@
 }
 
 
-    @keyframes slideSteps {
-      0% { transform: translateX(0%); }
-      15% { transform: translateX(0%); }
-
-      20% { transform: translateX(-33.33%); }
-      35% { transform: translateX(-33.33%); }
-
-      40% { transform: translateX(-66.66%); }
-      55% { transform: translateX(-66.66%); }
-
-      60% { transform: translateX(-99.99%); }
-      75% { transform: translateX(-99.99%); }
-
-      80% { transform: translateX(-133.32%); }
-      95% { transform: translateX(-133.32%); }
-
-      100% { transform: translateX(0%); }
-    }
+@keyframes slideSteps {
+  0%, 15% { transform: translateX(0); }
+  20%, 35% { transform: translateX(-100%); }  /* posun o 3 obrázky */
+  40%, 55% { transform: translateX(-200%); }
+  60%, 75% { transform: translateX(-300%); }
+  80%, 95% { transform: translateX(-400%); }
+  100% { transform: translateX(0); }
+}
   </style>
 </section>
