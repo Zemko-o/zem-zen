@@ -103,10 +103,18 @@
       <br>
       <div id="reviews-container"></div>
       <br>
+      <div id="book-container"></div>
+     
       
-    <section class="section">
-      <h2>Book Your Wellness Experience</h2>
-      <br>
+        <h3>🕒 Otváracie hodiny:</h3>
+        <p>Pondelok – Nedeľa: <strong>10:00 – 22:00</strong></p>
+      
+        <p>🧡 Tešíme sa na vás a veríme, že si u nás dokonale oddýchnete.</p>
+      
+        <a href="http://www.wellnessorava.sk/rezervacia" class="btn-rezervovat">Rezervovať teraz</a>
+      </section>
+
+
       <script id="setmore_script" type="text/javascript" src="https://assets.setmore.com/integration/static/setmoreIframeLive.js"></script><a style="float: none" id="Setmore_button_iframe" href="https://zemzen.setmore.com"><img 
   border="none" 
   src="images/booking.png" 
@@ -130,6 +138,17 @@
         console.error('Error loading reviews:', error);
       });
   </script>
+
+<script>
+  fetch('book.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('book-container').innerHTML = data;
+    })
+    .catch(error => {
+      console.error('Error loading reviews:', error);
+    });
+</script>
 
 </body>
 </html>

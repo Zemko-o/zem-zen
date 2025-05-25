@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wellness rezervácie</title>
+  <style>
+    /* From Uiverse.io by PriyanshuGupta28 */ 
+ul {
+  list-style: none;
+}
+
+.example-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.example-2 .icon-content {
+  margin: 0 10px;
+  position: relative;
+}
+.example-2 .icon-content .tooltip {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+.example-2 .icon-content:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: -50px;
+}
+.example-2 .icon-content a {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #4d4d4d;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.example-2 .icon-content a:hover {
+  box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+}
+.example-2 .icon-content a svg {
+  position: relative;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+}
+.example-2 .icon-content a:hover {
+  color: white;
+}
+.example-2 .icon-content a .filled {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #000;
+  transition: all 0.3s ease-in-out;
+}
+.example-2 .icon-content a:hover .filled {
+  height: 100%;
+}
+.example-2 .icon-content a[data-social="instagram"] .filled,
+.example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
+  background-color: #ea4c89;
+}
+.example-2 .icon-content a[data-social="setmore"] .filled,
+.example-2 .icon-content a[data-social="setmore"] ~ .tooltip {
+  background-color: #bd081c;
+}
+.example-2 .icon-content a[data-social="email"] .filled,
+.example-2 .icon-content a[data-social="email"] ~ .tooltip {
+  background-color: #19ab62;
+}
+.example-2 .icon-content a[data-social="phone"] .filled,
+.example-2 .icon-content a[data-social="phone"] ~ .tooltip {
+  background-color: #0088cc;
+}
+
+  </style>
+</head>
+<body>
+
+<section id="book-container" class="booking-section">
+  <h2>Vytvorte si rezerváciu ešte dnes</h2>
+  <br>
+  <p>Oddýchnite si v súkromí nášho wellness centra – presne podľa vašich predstáv.</p>
+  <br>
+  <h3>Pri rezervácii nám, prosím, uveďte:</h3>
+  <ul>
+    <br>
+    <li><strong>Balíček, o ktorý máte záujem</strong> (napr. Základný, Romantický, Rodinný...)</li>
+    <li><strong>Počet osôb</strong></li>
+    <li><strong>Výber 2 sáun:</strong>
+      <ul>
+        <li>Fínska sauna</li>
+        <li>Parná/Bylinná sauna</li>
+        <li>Infra sauna</li>
+      </ul>
+    </li>  
+  </ul>
+   
+  <ul class="example-2">
+    <li class="icon-content">
+      <a
+        data-social="instagram"
+        aria-label="Instagram"
+        href="https://www.instagram.com/zemzen_wellness/"
+      >
+        <div class="filled"></div>
+        <svg viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+          <path d="M349.33 69.33H162.67C107.67 69.33 69.33 107.67 69.33 162.67v186.67c0 54.99 38.34 93.34 93.34 93.34h186.67c54.99 0 93.34-38.35 93.34-93.34V162.67c0-54.99-38.35-93.34-93.34-93.34zM256 346.67c-50.7 0-91.33-40.63-91.33-91.33s40.63-91.33 91.33-91.33 91.33 40.63 91.33 91.33-40.63 91.33-91.33 91.33zm92.67-157.33c-11.76 0-21.33-9.57-21.33-21.33s9.57-21.33 21.33-21.33 21.33 9.57 21.33 21.33-9.57 21.33-21.33 21.33zM256 193.33a62.67 62.67 0 1 0 0 125.33 62.67 62.67 0 0 0 0-125.33z"/>
+        </svg>
+      </a>
+      <div class="tooltip">Instagram</div>
+    </li>
+  
+    <li class="icon-content">
+      <a
+        data-social="phone"
+        aria-label="Telefón"
+        href="tel:+421901701002"
+      >
+        <div class="filled"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="30px" height="30px">
+          <path d="M6.62 10.79a15.09 15.09 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.27 11.36 11.36 0 003.55.57 1 1 0 011 1V20a1 1 0 01-1 1A16 16 0 014 5a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.55 1 1 0 01-.27 1.11l-2.18 2.13z"/>
+        </svg>
+      </a>
+      <div class="tooltip">Telefón</div>
+    </li>
+
+    <li class="icon-content">
+      <a
+        data-social="email"
+        aria-label="Email"
+        href="mailto:zem-zen@gacel.com"
+      >
+        <div class="filled"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="30px" height="30px">
+          <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 18v-9.4l8 6.93 8-6.93V18H4z"/>
+        </svg>
+      </a>
+      <div class="tooltip">Email</div>
+    </li>
+
+    <li class="icon-content">
+      <a
+        data-social="setmore"
+        aria-label="Setmore Booking"
+        href="https://zemzen.setmore.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div class="filled"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="30px" height="30px">
+          <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zM7 11h5v5H7z"/>
+        </svg>
+      </a>
+      <div class="tooltip">Online Rezervácie</div>
+    </li>
+  </ul>
+
+  
+</section>
+
+</body>
+</html>
