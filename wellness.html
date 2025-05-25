@@ -29,19 +29,47 @@
   </header>
 
   <main>
-    <section class="hero">
-      <h1>Súkromný wellness</h1>
-      <br>
-        <p>
-          Oddýchni si v tichu a pohodlí nášho súkromného wellness centra, kde sa pokoj stretáva s luxusom.
-          Či už prichádzate s kamarátmi, s partnerom alebo s rodinou, náš wellness vám poskytne dostatok priestoru, príjemnú atmosféru a 
-          komfort na ničím nerušený oddych — bez hluku, bez davov, <strong>len vy a relax.</strong>
-        </p>
+    <section class="hero-section">
+      <div class="hero-left">
+        <img src="images/main-photo.jpg" alt="ZEM-ZEN wellness" />
+        <div class="hero-text">
+          <h1>ZEM-ZEN Súkromný Wellness</h1>
+          <br>
+          <p>Oddýchni si v tichu a pohodlí nášho súkromného wellness centra, kde sa pokoj stretáva s luxusom.</p>
+          
+          <p>Či už prichádzate s kamarátmi, s partnerom alebo s rodinou, náš wellness Vám poskytne dostatok priestoru, príjemnú atmosféru a 
+            komfort na ničím nerušený oddych — bez hluku, bez davov, <strong>len vy a relax.</strong></p>
+          <br>
+          <a href="#" class="btn" onclick="scrollToSection('book-container')">Rezervovať teraz</a>
 
+        </div>
+      </div>
+      <a href="#" class="hero-link" onclick="scrollToSection('balicky')">
+      <div class="hero-right">
+        <div class="hero-box">
+          <img src="images/pic1.jpeg" alt="Páry" />
+          <div class="box-text">
+            <h4>Balíčky</h4>
+            <p>V našej ponuke si každý nájde to svoje.</p>
+          </div></a>
+        </div>
+        <a href="#" class="hero-link" onclick="scrollToSection('reviews-container')">
+        <div class="hero-box">
+          <img src="images/pic6.jpeg" alt="Rodiny" />
+          <div class="box-text">
+            <h4>Spätná väzba od Vás</h4>
+            <p>Spokojnosť našich klientov je pre nás na prvom mieste.</p>
+          </div></a>
+        </div>
+      </div>
+    </section>
+
+    
               </section>
 
         
               <section class="section offer">
+                <br>
                 <h2>Čo Vám Ponúkame</h2>
               
                 <div class="container">
@@ -69,10 +97,11 @@
                     </div>
                   </div>
                 </div>
-
+              </section>
               
-
-                <section class="section">
+              
+                <section class="balicky">
+                  <div id="balicky"></div>
                   <h2>Zem-Zen Balíčky (2 hodiny)</h2>
                   <br>
                   <p>
@@ -140,5 +169,32 @@
 
 <script id="setmore_script" type="text/javascript" src="https://assets.setmore.com/integration/static/setmoreIframeLive.js"></script>
 
+<script>
+  function loadPackage(filename) {
+    fetch(filename)
+      .then(response => response.text())
+      .then(data => {
+        const container = document.getElementById('package-container');
+        container.innerHTML = data;
+
+        // Posun na začiatok sekcie, ale o 100px vyššie pre presnosť
+        const topOffset = container.getBoundingClientRect().top + window.scrollY - 100;
+        window.scrollTo({ top: topOffset, behavior: 'smooth' });
+      })
+      .catch(error => {
+        console.error('Error loading package:', error);
+      });
+  }
+</script>
+
+<script>
+  function scrollToSection(id) {
+    const target = document.getElementById(id);
+    if (target) {
+      const offset = target.getBoundingClientRect().top + window.scrollY - 120;
+      window.scrollTo({ top: offset, behavior: 'smooth' });
+    }
+  }
+</script>
 </body>
 </html>
