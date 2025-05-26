@@ -110,20 +110,41 @@
                     Stačí si vybrať a <strong style="color: #C10001;">nechať sa rozmaznávať</strong>.
                   </p>
                   <br>
+
+                  
                  
                   <div class="container">
                     <div data-text="Klasik" style="--r:-15;" class="glass">
                       <img src="https://cdn-icons-png.flaticon.com/512/5139/5139174.png" alt="Klasik balíček" style="width: 50%; height: auto;" />
+                      <div class="detail-text">
+                        <h3>Klasik</h3><br>
+                        <p><em>Ideálny pre každého, kto si chce v pokoji oddýchnuť a načerpať novú energiu.</em><br><br>
+                          Balík Klasik zahŕňa úplné súkromie, vírivku, 2 druhy sáun (fínsku a infra), oddychovú zónu a vlastnú hudbu.</p>
+                      </div>
+                      <div class="price">15€</div>
                     </div>
-
-
+                  
                     <div data-text="Exkluzív" style="--r:5;" class="glass">
                       <img src="https://png.pngtree.com/png-vector/20220606/ourmid/pngtree-black-and-white-champagne-glasses-with-bubbles-icon-png-image_4866325.png" alt="Exkluzív balíček" style="width: 60%; height: auto;" />
+                      <div class="detail-text">
+                        <h3>Exkluzív</h3><br>
+                        <p><em>Vhodný pre tých, ktorí si radi doprajú niečo navyše a chcú sa nechať rozmaznávať.</em><br><br>
+                          Balík Exkluzív obsahuje všetko z balíka Klasik, doplnené o šampanské (alko alebo nealko) a bonboniéru pre dokonalý zážitok.</p>
+                      </div>
+                      <div class="price">25€</div>
                     </div>
+                  
                     <div data-text="Romantika" style="--r:25;" class="glass">
                       <img src="https://static.thenounproject.com/png/2053967-200.png" alt="Romantika balíček" style="width: 50%; height: auto;" />
+                      <div class="detail-text">
+                        <h3>Romantika</h3><br>
+                        <p><em>Stvorený pre tých, čo si chcú dopriať viac luxusu a romantiky. Vhodné na výročia alebo výnimočné chvíle vo dvojici.</em><br><br>
+                          Všetko z balíka Exkluzív, obohatené o jemnú romantickú výzdobu a rôzne pochúťky. Pre maximálne pohodlie je k dispozícii aj odvoz na/z wellness.</p>
+                      </div>
+                      <div class="price">40€</div>
                     </div>
                   </div>
+                  
                   
 
                   <br>
@@ -196,5 +217,144 @@
     }
   }
 </script>
+
+<script>
+const glasses = document.querySelectorAll('.container .glass');
+
+glasses.forEach(glass => {
+  glass.addEventListener('click', () => {
+    const isActive = glass.classList.contains('active');
+
+    // Najprv odstrán aktivitu zo všetkých kariet
+    glasses.forEach(g => g.classList.remove('active'));
+
+    // Ak karta nebola aktívna, tak ju otvor (aktivuj)
+    if (!isActive) {
+      glass.classList.add('active');
+    }
+    // Ak bola aktívna, nič nepridávame, teda sa zatvoria všetky
+  });
+});
+
+</script>
+
 </body>
 </html>
+
+<style>
+  .container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .glass {
+  position: relative;
+  width: 300px;
+  height: 350px;
+  background: linear-gradient(#fff2, transparent);
+  /* border: 0.5px solid rgba(255, 255, 255, 0.1);*/
+  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  border-radius: 10px;
+  margin: 0 -45px;
+  backdrop-filter: blur(10px);
+  transform: rotate(calc(var(--r) * 1deg));
+}
+
+.container:hover .glass {
+  transform: rotate(0deg);
+  margin: 0 10px;
+}
+
+.container .glass::before {
+  content: attr(data-text);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background: rgba(197, 82, 82, 0.802);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.container .glass svg {
+  font-size: 2.5em;
+  fill: #c1001c;
+}
+
+/* Aktívny stav po kliknutí */
+.container .glass.active {
+  background: rgba(153, 142, 144, 0.6);
+  backdrop-filter: blur(7px);
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.4);
+  transform: scale(1.1) rotate(0deg);
+  z-index: 10;
+}
+
+/* Zmena textu na aktívnej karte */
+.container .glass.active::before {
+  background: rgba(197, 82, 82, 0.9);
+  color: #fff;
+  opacity: 1;
+}
+
+/* Text, ktorý vyjde keď je aktívna karta */
+.container .glass .detail-text {
+  position: absolute;
+  bottom: 60px;
+  color: white;
+  top: 30%;              /* Vertikálne vycentrovanie */
+  left: 50%;             /* Horizontálne vycentrovanie */
+  transform: translate(-50%, -50%); /* Presun na stred podľa stredu elementu */
+  width: 80%;            /* Trochu menšia šírka, aby nebola úplne na okraji */
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.container .glass.active .detail-text {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.container .glass.active img {
+  opacity: 0.05; /* alebo 0.1 podľa chuti – takmer neviditeľné */
+  transition: opacity 0.3s ease;
+}
+
+.container .glass .price {
+  position: absolute;
+  top: 13px;
+  right: 15px;
+  width: 50px;
+  height: 50px;
+  background: #C10001;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.container .glass.active .price {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+
+</style>
